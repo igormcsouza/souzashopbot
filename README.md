@@ -11,3 +11,9 @@ bellow. See
 for more details.
 
     heroku stack:set container
+
+_Heroku is trying to bind to port_: Well, this app is not a web app, so, the
+dyno must be set to be a worker. More about it
+[here](https://devcenter.heroku.com/articles/build-docker-images-heroku-yml#build-defining-your-build).
+Remember to set worker in the `heroku.yml`. If the dyno isn't starting up
+correctly, go and manually start it up!
