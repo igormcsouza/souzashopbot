@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  bot:
+    build:
+      context: .
+    env_file:
+      .env
+    volumes:
+      - bot.log /souzashopbot/bot.log
+      - db.sqlite /souzashopbot/db.sqlite
+    restart: always
